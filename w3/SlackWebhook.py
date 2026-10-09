@@ -7,19 +7,24 @@ Create Slack Webhook
 - Copy the Webhook URL (you’ll need this in code).
 """
 
-## Reference Code
+# Reference Code
 
 import requests
+from dotenv import load_dotenv
 import time
+import os
 
+load_dotenv()
 # Replace with your actual webhook URL
 
 
-WEBHOOK_URL = 
+WEBHOOK_URL = os.getenv('SLACK_URL')
+
 
 def send_slack_message(message):
     payload = {"text": message}
     requests.post(WEBHOOK_URL, json=payload)
+
 
 # Example: Simulate training alerts
 for epoch in range(1, 6):
