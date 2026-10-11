@@ -1,6 +1,4 @@
 .env
-*.csv
-.csv
 .env.example
 my_assignment_1
 /my_assignment_1
